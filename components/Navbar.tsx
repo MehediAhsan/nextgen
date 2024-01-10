@@ -33,7 +33,7 @@ const Navbar = () => {
                                 Company
                             </span>
                         </a>
-                        <ul className="flex items-center hidden space-x-8 lg:flex">
+                        <ul className="md:flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <a
                                     href="/"
@@ -75,7 +75,7 @@ const Navbar = () => {
                                 </a>
                             </li>
                         </ul>
-                        <ul className="flex items-center hidden space-x-8 lg:flex">
+                        <ul className="md:flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <a
                                     href="/"
