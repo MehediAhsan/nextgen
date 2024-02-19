@@ -71,7 +71,7 @@ const page = () => {
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
             <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
                 <table className="w-full table-auto text-sm text-left">
-                    <thead className="text-gray-600 font-medium border-b">
+                    <thead className="text-gray-600 bg-teal-500 font-medium border-b">
                         <tr>
                             <th className="py-3 px-6 flex items-center gap-x-4">
                                 <div>
@@ -81,7 +81,7 @@ const page = () => {
                                     />
                                     <label
                                         htmlFor="checkbox-all-items"
-                                        className="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
+                                        className="relative flex w-5 h-5 bg-white peer-checked:bg-pink-500 rounded-md border ring-offset-2 ring-pink-500 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
                                     >
                                     </label>
                                 </div>
@@ -97,7 +97,7 @@ const page = () => {
                     <tbody className="text-gray-600 divide-y">
                         {
                             tableItems.map((item, idx) => (
-                                <tr key={idx} className="odd:bg-gray-50 even:bg-white">
+                                <tr key={idx} className="odd:bg-yellow-50 even:bg-teal-50">
                                     <td className="px-6 py-4 whitespace-nowrap flex items-center gap-x-4">
                                         <div>
                                             <input type="checkbox" id={`checkbox-${idx}`} name={`checkbox-${idx}`} className="checkbox-item peer hidden"
@@ -106,7 +106,7 @@ const page = () => {
                                             />
                                             <label
                                                 htmlFor={`checkbox-${idx}`}
-                                                className="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
+                                                className="relative flex w-5 h-5 bg-white peer-checked:bg-pink-500 rounded-md border ring-offset-2 ring-pink-500 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
                                             >
                                             </label>
                                         </div>
