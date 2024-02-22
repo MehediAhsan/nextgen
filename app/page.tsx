@@ -7,7 +7,7 @@ import { FaBackward } from "react-icons/fa"
 export default function Home() {
   const [open, setOpen] = useState(false)
   return (
-    <>
+    <>   
     <Navbar/>
     <main className="flex justify-center items-center pt-52">
       <button onClick={() => setOpen(true)} className={`bg-teal-900 p-2 ${open? 'hidden': 'block'}`}>
