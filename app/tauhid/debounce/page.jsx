@@ -36,7 +36,6 @@ const page = () => {
     }
 
     useEffect(() => {
-        
         asyncFn();
 
     }, [debounceSearch])

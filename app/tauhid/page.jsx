@@ -1,7 +1,15 @@
 "use client"
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const page = () => {
+    const nav = [
+        {
+            title: "Debounce",
+            path: '/tauhid/debounce'
+        }
+    ]
+
     const tableItems = [
         {
             id: 1,
@@ -64,11 +72,20 @@ const page = () => {
             setSelectedItems([...selectedItems, id])
         }
     }
-    console.log(selectedItems);
 
-    
+
     return (
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+            <div className='p-2 my-5 hover:underline hover:text-yellow-200 space-x-4'>
+                {
+                    nav.map(menu => (
+                        <Link href={menu.path}>
+                            {menu.title}
+                        </Link>
+                    ))
+                }
+            </div>
+
             <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
                 <table className="w-full table-auto text-sm text-left">
                     <thead className="text-gray-600 bg-teal-500 font-medium border-b">
