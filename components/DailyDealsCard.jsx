@@ -1,6 +1,10 @@
 'use client'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { RiShoppingBasketLine } from "react-icons/ri";
+import { IoHeartSharp } from "react-icons/io5";
+import { TfiReload } from "react-icons/tfi";
+import { ImEye } from "react-icons/im";
 
 const DailyDealsCard = () => {
 
@@ -50,8 +54,11 @@ const DailyDealsCard = () => {
 
             <div className='relative hover:cursor-pointer'>
                 {
-                    isHover && (<div className='absolute top-0'>
-                        hi hi hi hih ih ih ih ih ih
+                    isHover && (<div className='absolute left-2 top-7 flex flex-col gap-2 items-center'>
+                        <div className='bg-gray-600 hover:bg-rose-500 p-[6px] rounded font-bold'><RiShoppingBasketLine/></div>
+                        <div className='bg-gray-600 hover:bg-rose-500 p-[6px] rounded font-bold'><IoHeartSharp/></div>
+                        <div className='bg-gray-600 hover:bg-rose-500 p-[6px] rounded font-bold'><TfiReload/></div>
+                        <div className='bg-gray-600 hover:bg-rose-500 p-[6px] rounded font-bold'><ImEye /></div>
                     </div>)
                 }
                 <div className='absolute top-5 right-5 size-10 rounded-full bg-rose-500 pt-3 text-xs text-center font-bold'>
