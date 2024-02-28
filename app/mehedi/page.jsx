@@ -1,13 +1,25 @@
 'use client'
 import React from 'react';
-import DynamicTable from '../../components/reuse/DynamicTable'
-import DebouncedInput from '../../components/reuse/DebouncedInput'
+import Link from 'next/link';
 
 const MehediPage = () => {
+    const routes = [
+        {
+            path: 'mehedi/dynamictable',
+            name: 'Dynamic Table',
+        },
+        {
+            path: 'mehedi/debouncedinput',
+            name: 'Debounced Input',
+        }
+    ]
     return (
-        <div>
-            {/* <DynamicTable/> */}
-            <DebouncedInput/>
+        <div className='flex gap-5 justify-center items-center min-h-screen'>
+            {
+                routes.map((route, i) => (
+                    <Link key={i} href={route.path}><button className='bg-teal-500 p-2 text-gray-800'>{route.name}</button></Link>
+                ))
+            }
         </div>
     );
 };
