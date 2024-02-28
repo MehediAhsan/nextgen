@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDebounce } from "../../../components/hooks/useDebounce";
 
-const page = () => {
+const debounce = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [search, setSearch] = useState("");
@@ -65,4 +65,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default debounce;
