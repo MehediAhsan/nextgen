@@ -66,7 +66,13 @@ const Sidebar = () => {
                                     }
                                 </li>
                                 {
-                                    (hover === index && item.dropdown === true) && <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow">
+                                    (hover === index && item.dropdown === true) ? <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-100 transition-all ease-linear duration-500">
+                                        {
+                                            item.dropdownItems?.map((it,i) => (
+                                                <span key={i} className="">{it}</span>
+                                            ))
+                                        }
+                                    </div> : <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-95 invisible">
                                         {
                                             item.dropdownItems?.map((it,i) => (
                                                 <span key={i} className="">{it}</span>
