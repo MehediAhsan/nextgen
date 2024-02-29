@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes horizontalWave {
+  from{
+    left: -8px;
+  }
+  to{
+    left: 0;
+  }
+}

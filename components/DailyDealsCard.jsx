@@ -1,6 +1,10 @@
 'use client'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { RiShoppingBasketLine } from "react-icons/ri";
+import { IoHeartSharp } from "react-icons/io5";
+import { TfiReload } from "react-icons/tfi";
+import { ImEye } from "react-icons/im";
 
 const DailyDealsCard = () => {
 
@@ -48,10 +52,25 @@ const DailyDealsCard = () => {
     return (
         <div className='flex gap-10' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
 
-            <div className='relative hover:cursor-pointer'>
+            <div className='relative z-[15] hover:cursor-pointer'>
                 {
-                    isHover && (<div className='absolute top-0'>
-                        hi hi hi hih ih ih ih ih ih
+                    isHover && (<div className='absolute z-20 left-2 top-7 flex flex-col gap-2'>
+                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.3s_ease-in-out]'>
+                            <RiShoppingBasketLine />
+                            <span className='absolute w-20 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-out group-hover:bg-rose-500'>Add to cart</span>
+                        </div>
+                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.5s_ease-in-out]'>
+                            <IoHeartSharp />
+                            <span className='absolute w-28 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Add to whitelist</span>
+                        </div>
+                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.7s_ease-in-out]'>
+                            <TfiReload />
+                            <span className='absolute w-36 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Compare this product</span>
+                        </div>
+                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.9s_ease-in-out]'>
+                            <ImEye />
+                            <span className='absolute w-16 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Preview</span>
+                        </div>
                     </div>)
                 }
                 <div className='absolute top-5 right-5 size-10 rounded-full bg-rose-500 pt-3 text-xs text-center font-bold'>
@@ -71,24 +90,24 @@ const DailyDealsCard = () => {
                     <h1>Available: <span className='text-rose-500'>{data[0].available}</span></h1>
                     <h1>Sold: <span className='font-bold'>{data[0].sold}</span></h1>
                 </div>
-                <div className='w-full h-[10px] bg-slate-400 rounded-full'>
+                <div className='w-full h-[10px] bg-gray-600 rounded-full'>
                     <div className={`h-[10px] bg-rose-500 rounded-full w-[calc(10%)]`}></div>
                 </div>
                 <div className='flex gap-5'>
                     <div className='flex flex-col items-center' >
-                        <h1 className='bg-gray-500 rounded-full size-10 p-2 text-center'>{countdown.days}</h1>
+                        <h1 className='bg-gray-600 rounded-full size-10 p-2 text-center'>{countdown.days}</h1>
                         <p className='text-xs uppercase'>Days</p>
                     </div>
                     <div className='flex flex-col items-center' >
-                        <h1 className='bg-gray-500 rounded-full size-10 p-2 text-center'>{countdown.hours}</h1>
+                        <h1 className='bg-gray-600 rounded-full size-10 p-2 text-center'>{countdown.hours}</h1>
                         <p className='text-xs uppercase'>Hours</p>
                     </div>
                     <div className='flex flex-col items-center' >
-                        <h1 className='bg-gray-500 rounded-full size-10 p-2 text-center'>{countdown.minutes}</h1>
+                        <h1 className='bg-gray-600 rounded-full size-10 p-2 text-center'>{countdown.minutes}</h1>
                         <p className='text-xs uppercase'>Mins</p>
                     </div>
                     <div className='flex flex-col items-center' >
-                        <h1 className='bg-gray-500 rounded-full size-10 p-2 text-center'>{countdown.seconds}</h1>
+                        <h1 className='bg-gray-600 rounded-full size-10 p-2 text-center'>{countdown.seconds}</h1>
                         <p className='text-xs uppercase'>Secs</p>
                     </div>
                 </div>
