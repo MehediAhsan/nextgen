@@ -1,5 +1,4 @@
-'use client'
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { GrProjects } from "react-icons/gr";
 import { FaAngleRight, FaCheck, FaCheckDouble } from "react-icons/fa";
@@ -7,7 +6,6 @@ import { FiPhoneCall } from "react-icons/fi";
 import { SiHelpscout } from "react-icons/si";
 
 const Sidebar = () => {
-    const [hover, setHover] = useState(null)
     const items = [
         {
             name: 'All Projects',
@@ -77,15 +75,13 @@ const Sidebar = () => {
         }
     ]
 
-    console.log(hover);
-
     return (
         <div className="flex justify-start items-start px-10">
             <div className="min-h-screen bg-white text-gray-900 shadow shadow-gray-100">
                 <ul>
                     {
                         items.map((item, index) => (
-                            <Link href={item.path} key={index} onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(null)} className="relative">
+                            <Link href={item.path} key={index} className="relative group">
                                 <li className="flex justify-between items-center hover:text-red-500 py-3 px-6 text-sm">
                                     <div className="flex gap-2 items-center">
                                         <span className="text-xs">{item.icon}</span>
@@ -96,13 +92,7 @@ const Sidebar = () => {
                                     }
                                 </li>
                                 {
-                                    (hover === index && item.dropdown === true) ? <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-100 transition-all ease-linear duration-500">
-                                        {
-                                            item.dropdownItems?.map((it,i) => (
-                                                <Link href={it.path} key={i} className="">{it.name}</Link>
-                                            ))
-                                        }
-                                    </div> : <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-95 invisible">
+                                    (item.dropdown === true) && <div className="invisible group-hover:visible absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow">
                                         {
                                             item.dropdownItems?.map((it,i) => (
                                                 <Link href={it.path} key={i} className="">{it.name}</Link>
