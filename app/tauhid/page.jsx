@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import DailyDealsCard from '../../components/DailyDealsCard';
 
 const page = () => {
     const nav = [
@@ -11,6 +10,10 @@ const page = () => {
         {
             title: "table",
             path: '/tauhid/table'
+        },
+        {
+            title: "Card",
+            path: '/tauhid/card'
         },
     ]
 
@@ -26,10 +29,7 @@ const page = () => {
                 }
             </div>
 
-            <div className='grid grid-cols-2'>
-                <DailyDealsCard/>
-                {/* <DailyDealsCard/> */}
-            </div>
+            
         </div>
     );
 };
