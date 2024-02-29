@@ -15,7 +15,22 @@ const Sidebar = () => {
             icon: <GrProjects />,
             dropdown: true,
             dropdownItems: [
-                'Subprojects', 'reactions', 'actions', 'deleted', 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                },
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                }, 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                }, 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                } 
             ]
         },
         {
@@ -30,7 +45,22 @@ const Sidebar = () => {
             icon: <FaCheckDouble />,
             dropdown: true,
             dropdownItems: [
-                'Subprojects', 'reactions', 'actions', 'deleted', 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                },
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                }, 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                }, 
+                {
+                    name: 'Submenu',
+                    path: '/submenu'
+                } 
             ]
         },
         {
@@ -69,13 +99,13 @@ const Sidebar = () => {
                                     (hover === index && item.dropdown === true) ? <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-100 transition-all ease-linear duration-500">
                                         {
                                             item.dropdownItems?.map((it,i) => (
-                                                <span key={i} className="">{it}</span>
+                                                <Link href={it.path} key={i} className="">{it.name}</Link>
                                             ))
                                         }
                                     </div> : <div className="absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow scale-95 invisible">
                                         {
                                             item.dropdownItems?.map((it,i) => (
-                                                <span key={i} className="">{it}</span>
+                                                <Link href={it.path} key={i} className="">{it.name}</Link>
                                             ))
                                         }
                                     </div>
