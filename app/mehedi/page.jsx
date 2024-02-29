@@ -11,7 +11,15 @@ const MehediPage = () => {
         {
             path: 'mehedi/debouncedinput',
             name: 'Debounced Input',
-        }
+        },
+        {
+            path: 'mehedi/sidebar',
+            name: 'Sidebar',
+        },
+        {
+            path: 'mehedi/dynamicmodal',
+            name: 'Dynamic Modal',
+        },
     ]
     return (
         <div className='flex gap-5 justify-center items-center min-h-screen'>
