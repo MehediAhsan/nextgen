@@ -65,3 +65,34 @@ body {
   color: #EFC378;
 }
 
+
+
+/* another */
+
+.product .swiper-button-prev {
+  padding: 16px;
+  border: 2px solid gray;
+  background-color: black;
+  border-radius: 50%;
+  top: 20px !important;
+  left: 93% !important;
+  color: gray !important;
+}
+
+.product .swiper-button-next {
+  padding: 16px;
+  border: 2px solid gray;
+  background-color: black;
+  border-radius: 50%;
+  top: 20px !important;
+  right: 0% !important;
+  color: gray !important;
+}
+
+.product .swiper-button-prev:hover {
+  color: #EFC378;
+}
+
+.product .swiper-button-next:hover {
+  color: #EFC378;
+}

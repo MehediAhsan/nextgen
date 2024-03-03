@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 
-const CustomSlider = () => {
+const Carousel = () => {
     const items = [
         {
             img: 'https://images.unsplash.com/photo-1612222869049-d8ec83637a3c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -35,7 +35,10 @@ const CustomSlider = () => {
         },
     ]
     return (
-        <div className='mt-52 mx-10 relative'>
+        <div className='mt-40 mx-10 relative product'>
+            <div className='border-b mb-10'>
+                <button className='bg-gray-200 p-2 text-black'>Most Views</button>
+            </div>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
@@ -77,4 +80,4 @@ const CustomSlider = () => {
     );
 };
 
-export default CustomSlider;
+export default Carousel;
