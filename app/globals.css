@@ -34,3 +34,36 @@ body {
     left: 0;
   }
 }
+
+
+.custom-swiper {
+  --swiper-navigation-color: #c7c3bd;
+  --swiper-navigation-size: 20px;
+}
+
+
+.swiper-button-prev {
+  position: absolute;
+  left: -1rem !important;
+  z-index: 50 !important;
+  padding: 20px;
+  border: 2px solid #8e8b86;
+  border-radius: 50%;
+}
+
+.swiper-button-next {
+  padding: 20px;
+  border: 2px solid #b7b3ac;
+  border-radius: 50%;
+}
+
+.swiper-button-prev:hover {
+  background: none;
+  color: #EFC378;
+}
+
+.swiper-button-next:hover {
+  background: none;
+  color: #EFC378;
+}
+

@@ -20,6 +20,10 @@ const MehediPage = () => {
             path: 'mehedi/dynamicmodal',
             name: 'Dynamic Modal',
         },
+        {
+            path: 'mehedi/customslider',
+            name: 'Custom Slider',
+        },
     ]
     return (
         <div className='flex gap-5 justify-center items-center min-h-screen'>
