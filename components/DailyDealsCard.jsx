@@ -85,7 +85,7 @@ const DailyDealsCard = ({ offer = 20, img = '', cardTitle = 'Card Title', curren
             </div>
             <div className='space-y-4'>
                 <h1 className='text-xl font-bold hover:text-rose-500 cursor-pointer'>{cardTitle}</h1>
-                <p className='text-xl text-rose-500 font-bold'>${currentPrice} {previousPrice && <span className='text-sm font-normal line-through text-gray-300'>${previousPrice}</span>}</p>
+                <p className='text-xl text-rose-500 font-bold'>${currentPrice} {previousPrice !== 0 && <span className='text-sm font-normal line-through text-gray-300'>${previousPrice}</span>}</p>
                 <div className='flex gap-10 justify-between items-center text-sm'>
                     <h1>Available: <span className='text-rose-500'>{data[0].available}</span></h1>
                     <h1>Sold: <span className='font-bold'>{data[0].sold}</span></h1>
