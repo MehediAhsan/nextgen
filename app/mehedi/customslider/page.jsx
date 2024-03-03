@@ -36,12 +36,16 @@ const CustomSlider = () => {
         },
     ]
     return (
-        <div className='mt-52 mx-20'>
+        <div className='mt-52 mx-10 relative'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
                 loop={true}
-                navigation={true}
+                // navigation={true}
+                navigation={{
+                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next',
+                }}
                 breakpoints={{
                     640: {
                         slidesPerView: 2,
@@ -57,7 +61,7 @@ const CustomSlider = () => {
                     },
                 }}
                 modules={[Navigation]}
-                style={{padding: '20px', border: '2px solid gray'}}
+                style={{ padding: '20px', border: '2px solid gray' }}
                 className="mySwiper custom-swiper"
             >
                 {
@@ -68,6 +72,8 @@ const CustomSlider = () => {
                     ))
                 }
             </Swiper>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     );
 };
