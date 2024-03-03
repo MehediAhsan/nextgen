@@ -6,9 +6,9 @@ import { IoHeartSharp } from "react-icons/io5";
 import { TfiReload } from "react-icons/tfi";
 import { ImEye } from "react-icons/im";
 
-const DailyDealsCard = () => {
+const DailyDealsCard = ({ offer = 20, img = '', cardTitle = 'Card Title', currentPrice = 450, previousPrice = 500, data }) => {
 
-    const data = [
+    data = [
         {
             available: 500,
             sold: 50
@@ -53,39 +53,39 @@ const DailyDealsCard = () => {
         <div className='flex gap-10' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
 
             <div className='relative z-[15] hover:cursor-pointer'>
+                <div className={`absolute z-20 left-2 top-7 flex flex-col gap-2 ${isHover ? "block" : "hidden"}`}>
+                    <div className='group relative bg-gray-600 transition-colors duration-500 ease-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.3s_ease-in-out]'>
+                        <RiShoppingBasketLine />
+                        <span className='absolute w-20 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-out group-hover:bg-rose-500'>Add to cart</span>
+                    </div>
+                    <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.5s_ease-in-out]'>
+                        <IoHeartSharp />
+                        <span className='absolute w-28 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Add to whitelist</span>
+                    </div>
+                    <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.7s_ease-in-out]'>
+                        <TfiReload />
+                        <span className='absolute w-36 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Compare this product</span>
+                    </div>
+                    <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.9s_ease-in-out]'>
+                        <ImEye />
+                        <span className='absolute w-16 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Preview</span>
+                    </div>
+                </div>
                 {
-                    isHover && (<div className='absolute z-20 left-2 top-7 flex flex-col gap-2'>
-                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.3s_ease-in-out]'>
-                            <RiShoppingBasketLine />
-                            <span className='absolute w-20 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-out group-hover:bg-rose-500'>Add to cart</span>
-                        </div>
-                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.5s_ease-in-out]'>
-                            <IoHeartSharp />
-                            <span className='absolute w-28 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Add to whitelist</span>
-                        </div>
-                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.7s_ease-in-out]'>
-                            <TfiReload />
-                            <span className='absolute w-36 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Compare this product</span>
-                        </div>
-                        <div className='group relative bg-gray-600 transition-colors duration-500 ease-in-out hover:bg-rose-500 p-[6px] rounded font-bold text-xs flex gap-1 animate-[horizontalWave_0.9s_ease-in-out]'>
-                            <ImEye />
-                            <span className='absolute w-16 p-1 -z-10 rounded-e bg-gray-600 top-0 left-0 group-hover:left-5 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-500 ease-in-out group-hover:bg-rose-500'>Preview</span>
-                        </div>
+                    offer !== 0 && (<div className='absolute top-5 right-5 size-10 rounded-full bg-rose-500 pt-3 text-xs text-center font-bold'>
+                        <span className='mt-3'>-{offer}%</span>
                     </div>)
                 }
-                <div className='absolute top-5 right-5 size-10 rounded-full bg-rose-500 pt-3 text-xs text-center font-bold'>
-                    <span className='mt-3'>-20%</span>
-                </div>
                 <Image
-                    src="https://images.unsplash.com/photo-1671600493594-edb52f00c6d7?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={`${img ? img : 'https://images.unsplash.com/photo-1671600493594-edb52f00c6d7?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}`}
                     width={250}
                     height={200}
                 // layout='responsive'
                 ></Image>
             </div>
             <div className='space-y-4'>
-                <h1 className='text-xl font-bold hover:text-rose-500 cursor-pointer'>Card Header</h1>
-                <p className='text-xl text-rose-500 font-bold'>$450 <span className='text-sm font-normal line-through text-gray-300'>$500</span></p>
+                <h1 className='text-xl font-bold hover:text-rose-500 cursor-pointer'>{cardTitle}</h1>
+                <p className='text-xl text-rose-500 font-bold'>${currentPrice} {previousPrice !== 0 && <span className='text-sm font-normal line-through text-gray-300'>${previousPrice}</span>}</p>
                 <div className='flex gap-10 justify-between items-center text-sm'>
                     <h1>Available: <span className='text-rose-500'>{data[0].available}</span></h1>
                     <h1>Sold: <span className='font-bold'>{data[0].sold}</span></h1>
