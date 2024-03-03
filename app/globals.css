@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --swiper-navigation-size: 20px !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,4 +34,65 @@ body {
   to{
     left: 0;
   }
+}
+
+
+.swiper-button-prev {
+  padding: 16px;
+  border: 2px solid gray;
+  left: -18px !important;
+  background-color: black;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  color: gray !important;
+}
+
+.swiper-button-next {
+  padding: 16px;
+  border: 2px solid gray;
+  right: -18px !important;
+  background-color: black;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  color: gray !important;
+}
+
+.swiper-button-prev:hover {
+  color: #EFC378;
+}
+
+.swiper-button-next:hover {
+  color: #EFC378;
+}
+
+
+
+/* another */
+
+.product .swiper-button-prev {
+  padding: 16px;
+  border: 2px solid gray;
+  background-color: black;
+  border-radius: 50%;
+  top: 20px !important;
+  left: 93% !important;
+  color: gray !important;
+}
+
+.product .swiper-button-next {
+  padding: 16px;
+  border: 2px solid gray;
+  background-color: black;
+  border-radius: 50%;
+  top: 20px !important;
+  right: 0% !important;
+  color: gray !important;
+}
+
+.product .swiper-button-prev:hover {
+  color: #EFC378;
+}
+
+.product .swiper-button-next:hover {
+  color: #EFC378;
 }
