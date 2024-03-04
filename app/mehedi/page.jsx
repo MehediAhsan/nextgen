@@ -28,6 +28,10 @@ const MehediPage = () => {
             path: 'mehedi/carousel',
             name: 'Carousel',
         },
+        {
+            path: 'mehedi/accordion',
+            name: 'Accordion',
+        },
     ]
     return (
         <div className='flex gap-5 justify-center items-center min-h-screen'>
