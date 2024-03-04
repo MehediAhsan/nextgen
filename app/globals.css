@@ -96,3 +96,44 @@ body {
 .product .swiper-button-next:hover {
   color: #EFC378;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .product .swiper-button-prev {
+      left: 75% !important;
+  }
+
+  .product .swiper-button-next {
+      left: 90% !important;
+  }
+}
+
+@media only screen and (min-width:500px) {
+  .product .swiper-button-prev {
+      left: 83% !important;
+  }
+
+  .product .swiper-button-next {
+      left: 93% !important;
+  }
+}
+@media only screen and (min-width:720px) {
+  .product .swiper-button-prev {
+      left: 88% !important;
+  }
+
+  .product .swiper-button-next {
+      left: 95% !important;
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  .product .swiper-button-prev {
+      left: 92% !important;
+  }
+
+  .product .swiper-button-next {
+      left: 97% !important;
+  }
+}
+
