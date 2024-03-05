@@ -18,8 +18,9 @@ const Accordion = () => {
             details: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum d lorem ipsum d lorem ipsum d lorem ips  lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips'
         },
     ]
+    console.log(open);
     return (
-        <div className='mt-20 w-6/12 mx-auto'>
+        <div className='mt-40 w-6/12 mx-auto'>
             {
                 data.map((dt, i) => (
                     <div key={i} className='cursor-pointer' onClick={() => { open !== i ? setOpen(i) : setOpen(null) }}>
@@ -29,7 +30,7 @@ const Accordion = () => {
                                 open === i ? <FaMinus></FaMinus> : <FaPlus></FaPlus>
                             }
                         </h1>
-                        <p className={`${open === i ? "h-40 transition-all duration-500 translate-y-0 opacity-100" : "h-0 opacity-0 -translate-y-4 transition-all duration-500"} p-3`}>{dt.details}</p>
+                        <p className={`${open === i ? "h-40 visible transition-all duration-500 translate-y-0 opacity-100" : "invisible h-0 opacity-0 -translate-y-4 transition-all duration-500"} p-3`}>{dt.details}</p>
                     </div>
                 ))
             }
