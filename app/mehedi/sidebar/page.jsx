@@ -4,8 +4,8 @@ import {items} from '../../../components/data/sidebardata.js'
 import { FaAngleRight } from "react-icons/fa";
 const Sidebar = () => {
     return (
-        <div className="flex justify-start items-start px-10">
-            <div className="min-h-screen bg-white text-gray-900 shadow shadow-gray-100">
+        <div className="flex justify-start items-start">
+            <div className="min-h-screen bg-gray-100 text-gray-900 shadow shadow-gray-100">
                 <ul>
                     {
                         items?.map((item, index) => (
@@ -20,10 +20,10 @@ const Sidebar = () => {
                                     }
                                 </Link>
                                 {
-                                    (item.dropdown === true) && <div className="invisible group-hover:visible absolute left-[197px] bg-white text-black top-0 p-6 flex flex-col gap-3 shadow">
+                                    (item.dropdown === true) && <div className="invisible group-hover:visible absolute left-[197px] bg-gray-100 top-0 px-8 py-4 flex flex-col gap-3 shadow text-sm transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-3 group-hover:translate-x-0">
                                         {
                                             item.dropdownItems?.map((it,i) => (
-                                                <Link href={it.path} key={i} className="">{it.name}</Link>
+                                                <Link href={it.path} key={i} className="text-black hover:text-red-500">{it.name}</Link>
                                             ))
                                         }
                                     </div>
@@ -33,7 +33,7 @@ const Sidebar = () => {
                     }
                 </ul>
             </div>
-            <main className="p-10">children</main>
+            <main className="p-10 text-gray-400">dashboard content...</main>
         </div>
     );
 };
