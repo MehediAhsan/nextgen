@@ -18,13 +18,12 @@ const Accordion = () => {
             details: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum d lorem ipsum d lorem ipsum d lorem ips  lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips lorem ips'
         },
     ]
-    console.log(open);
     return (
         <div className='mt-40 w-6/12 mx-auto'>
             {
                 data.map((dt, i) => (
                     <div key={i} className='cursor-pointer' onClick={() => { open !== i ? setOpen(i) : setOpen(null) }}>
-                        <h1 className='bg-gray-700 p-2 flex justify-between items-center cursor-pointer'>
+                        <h1 className='bg-teal-700 text-gray-200 p-2 flex justify-between items-center cursor-pointer rounded'>
                             {dt.name}
                             {
                                 open === i ? <FaMinus></FaMinus> : <FaPlus></FaPlus>
