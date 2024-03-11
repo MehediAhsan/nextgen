@@ -137,3 +137,16 @@ body {
   }
 }
 
+::-webkit-scrollbar{
+  background-color: darkgray;
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0F766E;
+  border-radius: 5px;
+}
+
