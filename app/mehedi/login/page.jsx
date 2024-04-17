@@ -65,19 +65,26 @@ const LoginPage = () => {
                             </div>
                         </div>
 
+                        <Link
+                            className="block text-right text-xs text-gray-500 mb-4"
+                            href="#"
+                        >পাসওয়ার্ড ভুলে গেছেন?</Link>
+
+
                         <button
                             type='submit'
                             className="w-full rounded bg-blue-500 text-orange-50 p-3 text-center font-bold text-sm mt-5"
                         >
-                             লগ ইন
+                            লগ ইন
                         </button>
 
-                        <button
-                            type='submit'
-                            className="w-full rounded bg-teal-500 text-orange-50 p-3 text-center font-bold text-sm mt-5"
-                        >
-                            রেজিস্টার
-                        </button>
+                        <Link href="/register">
+                            <button
+                                className="w-full rounded bg-teal-500 text-orange-50 p-3 text-center font-bold text-sm mt-5"
+                            >
+                                রেজিস্টার
+                            </button>
+                        </Link>
                     </form>
                 </div>
             </div>
