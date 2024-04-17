@@ -19,6 +19,10 @@ const page = () => {
             title: "Footer",
             path: '/tauhid/footer'
         },
+        {
+            title: "OTP",
+            path: '/tauhid/otp'
+        },
     ]
 
     return (
