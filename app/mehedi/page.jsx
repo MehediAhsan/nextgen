@@ -32,6 +32,14 @@ const MehediPage = () => {
             path: 'mehedi/accordion',
             name: 'Accordion',
         },
+        {
+            path: 'mehedi/accordion',
+            name: 'Accordion',
+        },
+        {
+            path: 'mehedi/register',
+            name: 'Register',
+        },
     ]
     return (
         <div className='flex gap-5 justify-center items-center min-h-screen'>
