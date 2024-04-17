@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
-import RegisterImage from '../../../assets/register.png'
+import LoginImage from '../../../assets/login.png'
 import logo from '../../../assets/logobiwta.png'
 import Image from 'next/image';
 
-const RegisterPage = () => {
+const LoginPage = () => {
     const [show, setShow] = useState(false)
     const {
         register,
@@ -23,15 +23,13 @@ const RegisterPage = () => {
         <div className='flex justify-center gap-10 items-center bg-white h-screen'>
             <div className='w-1/2 p-14 bg-[#f5f7fc]'>
                 <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
-                <h1 className='text-center font-bold mb-10'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
-                    এখনই রেজিস্ট্রেশন করুন</h1>
-                <Image src={RegisterImage} />
+                <Image src={LoginImage} />
             </div>
             <div
                 className="text-black w-1/2"
             >
                 <div className='w-7/12 mx-auto'>
-                    <h1 className='font-semibold text-xl mb-6'>একাউন্ট রেজিস্ট্রেশন করুন</h1>
+                    <h1 className='font-semibold text-xl mb-6'>লগ ইন করুন</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="text-secondary">
 
                         <div className='mb-4'>
@@ -44,21 +42,6 @@ const RegisterPage = () => {
                                 required
                                 type="email"
                                 placeholder='আপনার ইমেইল এ ড্রেস দিন'
-                                className="w-full px-3 py-5 mt-1 outline-none ring-none border border-gray-500 bg-[#E8F0FE] text-xs rounded"
-                            />
-                        </div>
-
-                        <div className='mb-4'>
-                            <label
-                                className="text-sm font-semibold text-gray-600 after:content-['*'] after:text-red-400"
-                            >  মোবাইল নাম্বার
-                            </label>
-                            <input
-                                onWheel={(e) => e.target.blur()}
-                                {...register("phone", { required: true })}
-                                required
-                                type="number"
-                                placeholder='আপনার ফোন নাম্বার দিন'
                                 className="w-full px-3 py-5 mt-1 outline-none ring-none border border-gray-500 bg-[#E8F0FE] text-xs rounded"
                             />
                         </div>
@@ -86,6 +69,13 @@ const RegisterPage = () => {
                             type='submit'
                             className="w-full rounded bg-blue-500 text-orange-50 p-3 text-center font-bold text-sm mt-5"
                         >
+                             লগ ইন
+                        </button>
+
+                        <button
+                            type='submit'
+                            className="w-full rounded bg-teal-500 text-orange-50 p-3 text-center font-bold text-sm mt-5"
+                        >
                             রেজিস্টার
                         </button>
                     </form>
@@ -95,4 +85,4 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+export default LoginPage;

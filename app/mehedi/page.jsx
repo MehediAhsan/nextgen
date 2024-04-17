@@ -40,6 +40,10 @@ const MehediPage = () => {
             path: 'mehedi/register',
             name: 'Register',
         },
+        {
+            path: 'mehedi/login',
+            name: 'Login',
+        },
     ]
     return (
         <div className='flex gap-5 justify-center items-center min-h-screen'>
