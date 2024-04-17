@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 import RegisterImage from '../../../assets/register.png'
+import logo from '../../../assets/logobiwta.png'
 import Image from 'next/image';
 
 const RegisterPage = () => {
@@ -14,13 +15,15 @@ const RegisterPage = () => {
         handleSubmit,
         reset,
     } = useForm();
-    const onSubmit = async (value) => {
+    const onSubmit = (value) => {
+        console.log(value);
         reset();
     };
     return (
         <div className='flex justify-center gap-10 items-center bg-white h-screen'>
-            <div className='w-1/2 p-14'>
-                <h1 className='text-center font-bold'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
+            <div className='w-1/2 p-14 bg-[#f5f7fc]'>
+            <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
+                <h1 className='text-center font-bold mb-10'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
                     এখনই রেজিস্ট্রেশন করুন</h1>
                 <Image src={RegisterImage} />
             </div>
@@ -52,7 +55,7 @@ const RegisterPage = () => {
                             </label>
                             <input
                                 onWheel={(e) => e.target.blur()}
-                                {...register("email", { required: true })}
+                                {...register("phone", { required: true })}
                                 required
                                 type="number"
                                 placeholder='আপনার ফোন নাম্বার দিন'
@@ -74,7 +77,7 @@ const RegisterPage = () => {
                                     className="w-full px-3 py-5 mt-1 outline-none ring-none border border-gray-500 bg-[#E8F0FE] text-xs rounded"
                                 />
                                 {
-                                    show ? <IoIosEye className='absolute top-5 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} /> : <IoIosEyeOff className='absolute top-5 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} />
+                                    show ? <IoIosEye className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} /> : <IoIosEyeOff className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} />
                                 }
                             </div>
                         </div>
