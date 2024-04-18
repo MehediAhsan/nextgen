@@ -44,9 +44,13 @@ const MehediPage = () => {
             path: 'mehedi/login',
             name: 'Login',
         },
+        {
+            path: 'mehedi/resetPassword',
+            name: 'Reset Password',
+        },
     ]
     return (
-        <div className='flex gap-5 justify-center items-center min-h-screen'>
+        <div className='flex flex-wrap gap-5 justify-center items-center pt-28'>
             {
                 routes.map((route, i) => (
                     <Link key={i} href={route.path}><button className='bg-teal-500 p-2 text-gray-800'>{route.name}</button></Link>

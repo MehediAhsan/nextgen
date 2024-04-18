@@ -20,17 +20,17 @@ const RegisterPage = () => {
         reset();
     };
     return (
-        <div className='flex justify-center gap-10 items-center bg-white h-screen'>
-            <div className='w-1/2 p-14 bg-[#f5f7fc]'>
+        <div className='md:flex justify-center gap-10 items-center bg-white h-screen'>
+            <div className='w-full md:w-1/2 p-14 bg-[#f5f7fc]'>
                 <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
                 <h1 className='text-center font-bold mb-10'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
                     এখনই রেজিস্ট্রেশন করুন</h1>
                 <Image src={RegisterImage} />
             </div>
             <div
-                className="text-black w-1/2"
+                className="text-black w-full md:w-1/2 py-10 md:py-0"
             >
-                <div className='w-7/12 mx-auto'>
+                <div className='w-9/12 md:w-7/12 mx-auto'>
                     <h1 className='font-semibold text-xl mb-6'>একাউন্ট রেজিস্ট্রেশন করুন</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="text-secondary">
 
