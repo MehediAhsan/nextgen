@@ -30,11 +30,11 @@ const page = () => {
 
     return (
         <div className='bg-white flex flex-row justify-around items-center'>
-            <div className='text-center p-5 space-y-5'>
+            <div className='text-center p-5 space-y-5 bg-gray-50'>
                 <h2 className='text-black font-bold text-xl'>
                     আপনার ফোন নম্বরে একটি OTP পাঠানো হয়েছে যা আপনার অ্যাকাউন্ট নিবন্ধনের জন্য ব্যবহৃত হবে।
                 </h2>
-                <Image src={img} alt='phone otp image' className='object-cover h-[86%] w-[86%] mx-auto' />
+                <Image src={img} alt='phone otp image' className='object-cover w-full mx-auto' />
             </div>
             <div className='text-center p-5 flex flex-col space-y-10'>
                 <h1 className='text-black text-2xl font-bold'>OTP ভেরিফিকেশন</h1>
