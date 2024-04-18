@@ -19,9 +19,9 @@ const ResetPassword = () => {
         reset();
     };
     return (
-        <div className='md:flex justify-center gap-10 items-center bg-white h-screen'>
-            <div className='w-full md:w-1/2 p-14 bg-[#f5f7fc] min-h-screen flex items-center justify-center'>
-                <Image src={RegisterImage} className='object-cover h-96 w-96' />
+        <div className='md:flex justify-center gap-10 items-center bg-white'>
+            <div className='w-full md:w-1/2 bg-[#f5f7fc] py-10 md:py-28 flex items-center justify-center'>
+                <Image src={RegisterImage} className='object-cover w-96' />
             </div>
             <div
                 className="text-black w-full md:w-1/2 py-10 md:py-0"
@@ -32,7 +32,7 @@ const ResetPassword = () => {
 
                         <div className='mb-4'>
                             <label
-                                className="text-sm font-semibold text-gray-600 after:content-['*'] after:text-red-400"
+                                className="text-sm font-semibold text-gray-600"
                             >  নতুন পাসওয়ার্ড দিন
                             </label>
                             <div className='relative'>
@@ -51,7 +51,7 @@ const ResetPassword = () => {
 
                         <div className='mb-4'>
                             <label
-                                className="text-sm font-semibold text-gray-600 after:content-['*'] after:text-red-400"
+                                className="text-sm font-semibold text-gray-600"
                             >  পুনরায় পাসওয়ার্ড দিন
                             </label>
                             <div className='relative'>

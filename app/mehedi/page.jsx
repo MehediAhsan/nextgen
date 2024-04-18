@@ -52,6 +52,10 @@ const MehediPage = () => {
             path: 'mehedi/clipboard',
             name: 'Clipboard',
         },
+        {
+            path: 'mehedi/forgotPassword',
+            name: 'Forgot Password',
+        },
     ]
     return (
         <div className='flex flex-wrap gap-6 justify-center items-center pt-28'>
