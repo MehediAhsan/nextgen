@@ -28,8 +28,8 @@ const page = () => {
                 </div>
             </div>
 
-            <div className='my-10 flex justify-around'>
-                <div className='w-[33%] border h-full border-gray-700 py-5 px-10 rounded-xl'>
+            <div className='my-10 flex flex-col lg:flex-row justify-around'>
+                <div className='w-full lg:w-[33%] border h-full border-gray-700 py-5 px-10 rounded-xl'>
                     <h2 className='font-semibold'>পেমেন্ট বিবরণ</h2>
                     <div className='flex justify-between text-sm py-6'>
                         <p>কোম্পানি নিবন্ধন ফি</p>
