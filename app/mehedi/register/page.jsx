@@ -23,9 +23,9 @@ const RegisterPage = () => {
         <div className='md:flex justify-center gap-10 items-center bg-white'>
             <div className='w-full md:w-1/2 py-10 bg-[#f5f7fc]'>
                 <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
-                <h1 className='text-center font-bold mb-10'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
+                <h1 className='text-center font-bold'>নৌযান পরিবহন এবং বাণিজ্যকে আরো সহজ এবং দ্রুতগামী করতে
                     এখনই রেজিস্ট্রেশন করুন</h1>
-                <Image src={RegisterImage} className='w-96 mx-auto h-96 object-cover' />
+                <Image src={RegisterImage} className='mx-auto object-cover px-10' />
             </div>
             <div
                 className="text-black w-full md:w-1/2 py-10 md:py-0"

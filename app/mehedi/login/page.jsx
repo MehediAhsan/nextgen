@@ -23,7 +23,7 @@ const LoginPage = () => {
         <div className='md:flex justify-center gap-10 items-center bg-white'>
             <div className='w-full md:w-1/2 py-14 bg-[#f5f7fc]'>
                 <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
-                <Image src={LoginImage} className='w-96 h-96 mx-auto object-cover' />
+                <Image src={LoginImage} className='mx-auto object-cover px-10' />
             </div>
             <div
                 className="text-black w-full md:w-1/2 py-10 md:py-0"

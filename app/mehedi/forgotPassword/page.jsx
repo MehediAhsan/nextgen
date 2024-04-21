@@ -1,14 +1,11 @@
 'use client';
-import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 import RegisterImage from '../../../assets/reset.jpg'
 import logo from '../../../assets/logobiwta.png'
 import Image from 'next/image';
 
 const ForgotPassword = () => {
-    const [show, setShow] = useState(false)
     const {
         register,
         formState: { errors },
@@ -23,9 +20,9 @@ const ForgotPassword = () => {
         <div className='md:flex justify-center gap-10 items-center bg-white'>
             <div className='w-full md:w-1/2 p-10 bg-[#f5f7fc]'>
                 <Image src={logo} className='w-20 h-20 mx-auto mb-5' />
-                <h1 className='text-center font-bold mb-10'>চিন্তা করবেন না! ভুলে যেতেই পারেন। ফোন নম্বর লিখুন
+                <h1 className='text-center font-bold'>চিন্তা করবেন না! ভুলে যেতেই পারেন। ফোন নম্বর লিখুন
                     আমরা এই ফোন নম্বরে OTP পাঠাব।</h1>
-                <Image src={RegisterImage} className='w-96 mx-auto object-cover' />
+                <Image src={RegisterImage} className='mx-auto object-cover px-10' />
             </div>
             <div
                 className="text-black w-full md:w-1/2 py-10 md:py-0"
