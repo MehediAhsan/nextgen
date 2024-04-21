@@ -21,7 +21,7 @@ const ResetPassword = () => {
     return (
         <div className='md:flex justify-center gap-10 items-center bg-white'>
             <div className='w-full md:w-1/2 bg-[#f5f7fc] py-10 md:py-28 flex items-center justify-center'>
-                <Image src={RegisterImage} className='object-cover w-96' />
+                <Image src={RegisterImage} className='object-cover px-10' />
             </div>
             <div
                 className="text-black w-full md:w-1/2 py-10 md:py-0"
