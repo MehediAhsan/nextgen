@@ -44,12 +44,24 @@ const MehediPage = () => {
             path: 'mehedi/login',
             name: 'Login',
         },
+        {
+            path: 'mehedi/resetPassword',
+            name: 'Reset Password',
+        },
+        {
+            path: 'mehedi/clipboard',
+            name: 'Clipboard',
+        },
+        {
+            path: 'mehedi/forgotPassword',
+            name: 'Forgot Password',
+        },
     ]
     return (
-        <div className='flex gap-5 justify-center items-center min-h-screen'>
+        <div className='flex flex-wrap gap-6 justify-center items-center pt-28'>
             {
                 routes.map((route, i) => (
-                    <Link key={i} href={route.path}><button className='bg-teal-500 p-2 text-gray-800'>{route.name}</button></Link>
+                    <Link key={i} href={route.path}><button className='bg-teal-500 p-2 text-gray-800 -skew-y-12 hover:-skew-y-0 transition-all duration-500 font-semibold'>{route.name}</button></Link>
                 ))
             }
         </div>
