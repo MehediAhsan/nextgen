@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import img from "@/public/assets/payment.png";
 import logo from "@/public/assets/logo.svg";
 import Image from 'next/image';
@@ -14,6 +15,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 
 
 const page = () => {
+    const [isBkash, setIsBkash] = useState(null)
     return (
         <div>
             <div className='bg-gradient-to-r from-white to-[#B8E0FF] p-4 hidden md:block text-lg font-semibold text-center'>
@@ -60,21 +62,27 @@ const page = () => {
                             <p>সম্পূর্ণ নিরাপদ পেমেন্ট</p>
                         </div>
                     </div>
-                    <div className='flex items-center justify-between p-4 border border-gray-700 rounded-lg'>
+                    <div
+                        onClick={() => setIsBkash(true)}
+                        className='flex items-center justify-between p-4 border border-gray-700 rounded-lg'
+                    >
                         <div className='space-x-5'>
-                            <input type="radio" name="bkash" id="bkash" className='w-4 h-4' />
+                            <input type="radio" name="bkash" id="bkash" className='w-4 h-4' checked={isBkash} />
                             <label htmlFor="bkash">বিকাশ</label>
                         </div>
                         <Image src={bkash} className='w-32' />
                     </div>
-                    <div className='space-x-5 flex items-center ms-5'>
+                    <div className='space-x-5 flex items-center ms-4'>
                         <input type="checkbox" name="savePhoneNumber" id="savePhoneNumber" className='w-4 h-4' />
                         <label htmlFor="savePhoneNumber">বিকাশ ফোন নাম্বারটি সেভ করুন</label>
                     </div>
 
-                    <div className='flex items-center justify-between p-4 border border-gray-700 rounded-lg'>
+                    <div
+                        onClick={() => setIsBkash(false)}
+                        className='flex items-center justify-between p-4 border border-gray-700 rounded-lg'
+                    >
                         <div className='space-x-5'>
-                            <input type="radio" name="otherPayment" id="otherPayment" className='w-4 h-4' />
+                            <input type="radio" name="otherPayment" id="otherPayment" className='w-4 h-4' checked={!isBkash} />
                             <label htmlFor="otherPayment">অন্যান্য পেমেন্ট মাধ্যম</label>
                         </div>
                         <div className='flex gap-3'>
@@ -92,10 +100,10 @@ const page = () => {
                         </div>
                     </div>
 
-                    <div className='space-x-5 flex items-center ms-5'>
+                    <div className='space-x-5 flex items-center ms-4'>
                         <input type="checkbox" name="agreementStatus" id="agreementStatus" className='w-4 h-4' />
                         <label htmlFor="agreementStatus">আমি এই প্ল্যাটফর্ম
-                            <a href="#" className='text-blue-600 hover:underline' target='_blank'> ব্যবহারের শর্তাবলি </a>ও 
+                            <a href="#" className='text-blue-600 hover:underline' target='_blank'> ব্যবহারের শর্তাবলি </a>ও
                             <a href="#" className='text-blue-600 hover:underline' target='_blank'> গোপনীয়তা নীতির </a>ব্যাপারে সম্মতি দিচ্ছি
                         </label>
                     </div>
