@@ -23,6 +23,11 @@ const page = () => {
             title: "OTP",
             path: '/tauhid/otp'
         },
+        {
+            title: "Payment",
+            path: '/tauhid/payment'
+        },
+
     ]
 
     return (
