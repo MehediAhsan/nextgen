@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 const ResetPassword = () => {
     const [show, setShow] = useState(false)
+    const [show2, setShow2] = useState(false)
     const {
         register,
         formState: { errors },
@@ -56,13 +57,13 @@ const ResetPassword = () => {
                             </label>
                             <div className='relative'>
                                 <input
-                                    {...register("password", { required: true })}
+                                    {...register("repeatPassword", { required: true })}
                                     required
-                                    type={`${show ? 'text' : 'password'}`}
+                                    type={`${show2 ? 'text' : 'password'}`}
                                     className="w-full px-3 py-5 mt-1 outline-none ring-none border border-gray-500 bg-[#E8F0FE] text-xs rounded"
                                 />
                                 {
-                                    show ? <IoIosEye className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} /> : <IoIosEyeOff className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow(!show)} />
+                                    show2 ? <IoIosEye className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow2(!show2)} /> : <IoIosEyeOff className='absolute top-6 right-4 text-xl text-gray-600 cursor-pointer' onClick={() => setShow2(!show2)} />
                                 }
                             </div>
                         </div>
