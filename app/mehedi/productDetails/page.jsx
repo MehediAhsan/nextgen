@@ -5,7 +5,7 @@ import ProductDescription from './ProductDescription';
 
 const ProductDetailsPage = () => {
     return (
-        <div className='grid grid-cols-2 gap-10 px-20 pt-10 bg-white'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 px-20 py-20 bg-white'>
             <div className="">
                 <ProductImages />
             </div>

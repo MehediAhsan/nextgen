@@ -1,4 +1,6 @@
-import { FaMinus, FaPlus } from "react-icons/fa";
+import { DiGitCompare } from "react-icons/di";
+import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
+import { GoGitCompare } from "react-icons/go";
 
 const ProductDescription = () => {
 
@@ -8,9 +10,9 @@ const ProductDescription = () => {
       <h2 className="font-semibold text-xl">Srehenderit Dolore</h2>
 
       <div className="flex items-center gap-3">
-        <h1 className="text-red-500 text-2xl">$710.00</h1>
+        <h1 className="text-red-500 text-2xl font-bold">$710.00</h1>
         <p className="text-sm line-through text-gray-500">$725.00</p>
-        <span className="bg-red-500 p-1">-20%</span>
+        <span className="bg-red-500 p-1 text-xs text-white font-semibold">-20%</span>
       </div>
 
       <div className="text-gray-500 flex flex-col gap-3 text-sm font-medium">
@@ -43,8 +45,14 @@ const ProductDescription = () => {
       </div>
 
       <div className="flex gap-5">
-        <button className="bg-red-500 px-10 py-2 text-white font-semibold text-sm">ADD TO CART</button>
-        <button className="bg-red-500 px-10 py-2 text-white font-semibold text-sm">BUY NOW</button>
+        <button className="bg-red-500 px-10 py-3 text-white font-semibold text-sm">ADD TO CART</button>
+        <button className="bg-lime-500 px-10 py-3 text-white font-semibold text-sm">BUY NOW</button>
+      </div>
+
+      <div className="flex gap-5">
+        <span className="flex items-center gap-2"><FaHeart className="bg-red-100 p-2 rounded-full text-3xl"/> <p className="text-sm">ADD TO WISHLIST</p></span>
+
+        <span className="flex items-center gap-2"><GoGitCompare className="bg-red-100 p-2 rounded-full text-3xl"/> <p className="text-sm">ADD TO COMPARE</p></span>
       </div>
     </div>
   );
