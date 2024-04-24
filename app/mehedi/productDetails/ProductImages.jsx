@@ -20,9 +20,6 @@ import Image from 'next/image';
 const ProductImages = () => {
     const [isLightbox, setLightbox] = useState(false);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const [selectedImage, setSelectedImage] = useState(
-        "https://images.unsplash.com/photo-1614681792161-e883a0380275?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    );
 
     const images = [
         {
@@ -53,10 +50,6 @@ const ProductImages = () => {
         if (event.target === event.currentTarget) {
             setLightbox(!isLightbox);
         }
-    }
-
-    function fullSizeClick(image) {
-        setSelectedImage(image);
     }
 
     const [currentIndex, setCurrentIndex] = useState(0);
