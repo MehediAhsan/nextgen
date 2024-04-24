@@ -133,3 +133,13 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 5px;
 }
 
+
+.project .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.project .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
