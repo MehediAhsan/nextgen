@@ -14,7 +14,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 
 
 
-const page = () => {
+const VoyagePayment = () => {
     const [isBkash, setIsBkash] = useState(null)
     return (
         <div>
@@ -118,4 +118,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default VoyagePayment;
