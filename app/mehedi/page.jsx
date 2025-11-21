@@ -68,6 +68,10 @@ const MehediPage = () => {
             path: 'mehedi/footer',
             name: 'Footer',
         },
+        {
+            path: 'mehedi/stepper',
+            name: 'Stepper',
+        },
     ]
     return (
         <div className='flex flex-wrap gap-6 justify-center items-center pt-28'>
