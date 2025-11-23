@@ -3,9 +3,28 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaExpand } from "react-icons/fa";
 const ComponentMap = [
-  {
-    category: "Accordion",
-  },
+  { category: "Accordion" },
+  { category: "Banner" },
+  { category: "Card" },
+  { category: "Carousel" },
+  { category: "Clipboard" },
+  { category: "CustomSlider" },
+  { category: "Debounce" },
+  { category: "DebouncedInput" },
+  { category: "DynamicModal" },
+  { category: "DynamicTable" },
+  { category: "Footer-Complex" },
+  { category: "Footer-Simple" },
+  { category: "ForgotPassword" },
+  { category: "Login" },
+  { category: "Otp" },
+  { category: "Payment" },
+  { category: "ProductDetails" },
+  { category: "Register" },
+  { category: "ResetPassword" },
+  { category: "Sidebar" },
+  { category: "Stepper" },
+  { category: "Table" },
 ];
 export default function ComponentLayout({
   children,
